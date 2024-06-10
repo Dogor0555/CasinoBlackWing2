@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+body {
+    background-image: url("../../images/WaitRoom.jpg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.menu {
+    font-size: 4vw; /* Cambiando el tamaño de la fuente a una unidad relativa */
+    font-weight: bold;
+    text-align: center;
+    margin-top: 5vh; /* Utilizando una unidad relativa para el margen superior */
+    font-family: 'Montserrat', sans-serif;
+    display: flex; /* Utilizando flexbox para distribuir los elementos */
+    flex-direction: column; /* Distribución vertical de los elementos */
+    align-items: center; /* Centrando los elementos horizontalmente */
+}
+
+.menu-item {
+    margin: 2vh 0 10vh; /* Espacio entre los elementos usando unidades relativas */
+}
+
+a {
+    text-decoration: none;
+    padding: 2vh 4vw; /* Usando unidades relativas para el relleno */
+    font-size: inherit;
+    background-color: rgba(238, 254, 255, 0.55); /* Utilizando RGBA para el color de fondo con transparencia */
+    color: #302E2D;
+    border: none;
+    border-radius: 1vw; /* Utilizando una unidad relativa para el radio de borde */
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+    transition: transform 0.2s, box-shadow 0.2s, background 0.2s;
+}
+
+a:hover {
+    text-decoration: none;
+    transform: scale(1.1);
+    color: #FFD700;
+    background-color: #EEFEFF;
+}
+
+a:active {
+    transform: scale(0.95);
+    box-shadow: 0.2vw 0.4vw 1vw rgba(0, 0, 0, 0.4);
+    color: #EEFEFF;
+    background-color: #FFD700;
+}
+
+.navbar {
+    position: absolute;
+    font-weight: bold;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background: rgb(0, 0, 0);
+    color: white;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+}
+
+.profile img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 0.5rem;
+}
+
+.user-name {
+    padding: 0.5rem 1rem;
+    background-color: rgba(238, 254, 255, 0.55); /* Utilizando RGBA para el color de fondo con transparencia */
+    color: #302E2D;
+    border-radius: 0.25rem;
+    transition: background-color 0.2s;
+}
+
+.user-name:hover {
+    text-decoration: none;
+    transform: scale(1.1);
+    color: #f5f5f5;
+    background-color: #d9be0e;
+}
+
+.logout-button {
+    background-color: #f56565;
+    color: white;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 0.375rem;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+}
+
+.logout-button:hover {
+    background-color: #c53030;
+}
+
+@media screen and (max-width: 768px) {
+    .menu {
+        font-size: 6vw; /* Tamaño de fuente más grande para pantallas más pequeñas */
+        margin-top: 10vh; /* Margen superior más grande para pantallas más pequeñas */
+    }
+
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .profile, .logout-button {
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin-top: 1rem;
+        margin-left: 1rem;
+    }
+
+    .user-name {
+        background-color: rgba(238, 254, 255, 0.55);
+        padding: 0.5rem 1rem;
+        border-radius: 1rem;
+        font-size: 4vw;
+        width: 70%;
+        text-align: center;
+    }
+
+    .logout-button {
+        order: 2;
+        margin-top: right; /* Ajuste la posición del botón de cerrar sesión */
+        margin-left: auto;
+        font-size: 4vw;
+        width: 30%;
+
+    }
+
+    a {
+        width: 100%;
+        text-align: center;
+    }
+}

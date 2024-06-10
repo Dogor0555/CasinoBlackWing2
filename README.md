@@ -1,1 +1,2 @@
-# CasinoBlackWing2
+# Casino_RedesII_Juegos
+ Proyecto de Redes II 
